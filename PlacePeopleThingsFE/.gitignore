@@ -1,0 +1,9 @@
+# Flutter
+.flutter-plugins
+.packages
+.dart_tool/
+build/
+
+# Optional: macOS
+.DS_Store
+

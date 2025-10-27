@@ -1,0 +1,31 @@
+{
+  "name": "PlacePeopleThingsAPI",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "predev": "ts-node src/migrate.ts",
+    "dev": "nodemon --watch src --ext ts --exec \"ts-node\" src/index.ts",
+    "dev:debug": "nodemon --watch src --ext ts --exec \"node --inspect -r ts-node/register\" src/index.ts",
+    "build": "tsc -p .",
+    "start": "node dist/migrate.js && node dist/index.js",
+    "docker:build": "docker-compose build --no-cache",
+    "docker:up": "docker-compose up --remove-orphans --build",
+    "lint": "echo \"Add linting if desired\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^5.1.0",
+    "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^24.9.1",
+    "@types/pg": "^8.15.5",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.9.3"
+  }
+}

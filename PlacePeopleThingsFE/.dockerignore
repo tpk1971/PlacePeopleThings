@@ -1,0 +1,9 @@
+build
+.flutter-plugins
+.packages
+.dart_tool
+.pub-cache
+.git
+.DS_Store
+.env
+
